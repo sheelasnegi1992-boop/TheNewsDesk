@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The News Desk | Latest News</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="topbar">
+            <span>THE NEWS DESK</span>
+            <span id="today">Latest Updates</span>
+        </div>
+
+        <div class="logo">
+            <h1>THE NEWS <span>DESK</span></h1>
+            <p>Your Daily Source of Information</p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="#" class="active" data-category="All">Home</a>
+            <a href="#" data-category="National">National</a>
+            <a href="#" data-category="International">International</a>
+            <a href="#" data-category="Sports">Sports</a>
+            <a href="#" data-category="Technology">Technology</a>
+            <a href="#" data-category="Business">Business</a>
+            <a href="#" data-category="Entertainment">Entertainment</a>
+        </nav>
+
+    </header>
+
+    <!-- BREAKING NEWS -->
+    <div class="breaking">
+        <strong>BREAKING NEWS</strong>
+        <span>Stay informed with the latest updates.</span>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section class="welcome">
+            <h2>Welcome to The News Desk</h2>
+            <p>Read the latest news from India and around the world.</p>
+        </section>
+
+        <!-- SEARCH -->
+        <section class="search-area">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search news..."
+            >
+        </section>
+
+        <!-- NEWS -->
+        <section>
+            <h2 id="categoryTitle">Latest News</h2>
+
+            <div id="newsContainer" class="news-grid">
+                <p class="loading">Loading latest news...</p>
+            </div>
+
+            <p id="noNews" class="hidden">
+                No news found.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- ARTICLE DIALOG -->
+    <dialog id="articleDialog" class="article-dialog">
+        <button class="close-dialog" id="closeDialog">
+            Close
+        </button>
+
+        <div id="articleContent" class="article-full"></div>
+    </dialog>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>THE NEWS DESK</h2>
+        <p>Your Daily Source of Information</p>
+        <p>© 2026 The News Desk. All rights reserved.</p>
+      <a href="admin.html" class="admin-link">Publisher Login</a>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
