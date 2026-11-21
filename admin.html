@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Publisher Dashboard | The News Desk</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>THE NEWS <span>DESK</span></h1>
+            <p>Publisher Dashboard</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PUBLISHER LOGIN -->
+        <section id="loginSection" class="admin-box">
+
+            <h2>Publisher Login</h2>
+
+            <p>Only the authorized publisher can access this dashboard.</p>
+
+            <form id="loginForm">
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Your password"
+                    required
+                >
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+        </section>
+
+        <!-- PUBLISHER DASHBOARD -->
+        <section id="dashboard" class="hidden">
+
+            <h2>Publish Your News</h2>
+
+            <form id="newsForm">
+
+                <input type="hidden" id="editId">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="News headline"
+                    required
+                >
+
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="National">National</option>
+                    <option value="International">International</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Business">Business</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+
+                <textarea
+                    id="summary"
+                    placeholder="Short news description"
+                    required
+                ></textarea>
+
+                <textarea
+                    id="content"
+                    placeholder="Write your complete news article here..."
+                    rows="10"
+                    required
+                ></textarea>
+
+                <label for="imageUrl">News Image URL</label>
+
+                <input
+                    type="url"
+                    id="imageUrl"
+                    placeholder="Paste image URL here"
+                >
+
+                <button type="submit" id="publishButton">
+                    Publish News
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelEdit"
+                    class="hidden"
+                >
+                    Cancel Edit
+                </button>
+
+            </form>
+
+            <hr>
+
+            <h2>Your Published News</h2>
+
+            <div id="adminNewsList"></div>
+
+            <button type="button" id="logoutButton">
+                Logout
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT -->
+    <script type="module" src="js/admin.js"></script>
+
+</body>
+</html>
